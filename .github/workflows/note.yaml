@@ -68,9 +68,8 @@ jobs:
 
       - name: Install Claude Code SDK
         run: |
-          npm init -y
-          npm pkg set type=module
-          npm i @anthropic-ai/claude-code
+          npm install
+          npm ls @anthropic-ai/claude-code
 
       - name: Research with Claude Code SDK
         run: |
@@ -146,11 +145,8 @@ jobs:
           node-version: '20'
 
       - name: Install AI SDK
-        run: |
-          npm init -y
-          npm pkg set type=module
-          npm i ai @ai-sdk/anthropic
-
+        run: npm install
+        
       - name: Restore research
         env:
           RESEARCH_B64: ${{ needs.research.outputs.research_b64 }}
@@ -236,10 +232,7 @@ jobs:
           node-version: '20'
 
       - name: Install AI SDK
-        run: |
-          npm init -y
-          npm pkg set type=module
-          npm i ai @ai-sdk/anthropic
+        run: npm install
 
       - name: Restore draft json
         env:
@@ -383,9 +376,7 @@ jobs:
 
       - name: Install Playwright
         run: |
-          npm init -y
-          npm pkg set type=module
-          npm i playwright marked
+          npm install
           npx playwright install --with-deps chromium | cat
 
       - name: Prepare storageState
