@@ -69,6 +69,7 @@ jobs:
       - name: Install Claude Code SDK
         run: |
           npm init -y
+          npm pkg set type=module
           npm i @anthropic-ai/claude-code
 
       - name: Research with Claude Code SDK
@@ -147,6 +148,7 @@ jobs:
       - name: Install AI SDK
         run: |
           npm init -y
+          npm pkg set type=module
           npm i ai @ai-sdk/anthropic
 
       - name: Restore research
@@ -236,6 +238,7 @@ jobs:
       - name: Install AI SDK
         run: |
           npm init -y
+          npm pkg set type=module
           npm i ai @ai-sdk/anthropic
 
       - name: Restore draft json
@@ -381,6 +384,7 @@ jobs:
       - name: Install Playwright
         run: |
           npm init -y
+          npm pkg set type=module
           npm i playwright marked
           npx playwright install --with-deps chromium | cat
 
