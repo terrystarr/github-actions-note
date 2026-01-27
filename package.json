@@ -12,5 +12,6 @@
   "type": "commonjs",
   "dependencies": {
     "playwright": "^1.55.1"
+    "@anthropic-ai/claude-code": "^0.2.9"
   }
 }
